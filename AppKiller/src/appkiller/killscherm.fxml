@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="416.0" prefWidth="419.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appkiller.KillschermController">
+   <children>
+      <GridPane prefHeight="424.0" prefWidth="428.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <TabPane fx:id="main" prefHeight="416.0" prefWidth="422.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                  <Tab text="Kill">
+                    <content>
+                      <AnchorPane>
+                           <children>
+                              <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="110.0" layoutY="65.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@killer.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Button layoutX="79.0" layoutY="300.0" mnemonicParsing="false" onAction="#killButton" prefHeight="60.0" prefWidth="100.0" text="Kill" textAlignment="CENTER" />
+                              <Button layoutX="213.0" layoutY="335.0" mnemonicParsing="false" onAction="#killList" prefWidth="150.0" text="Kill selected list" />
+                              <ComboBox fx:id="eigenLijst" layoutX="213.0" layoutY="300.0" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Processes">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="332.0" prefWidth="345.0">
+                           <children>
+                              <Button layoutX="158.0" layoutY="317.0" mnemonicParsing="false" onAction="#kill" prefHeight="50.0" prefWidth="100.0" text="Kill" translateX="1.0" translateY="1.0" />
+                              <Button layoutX="283.0" layoutY="318.0" mnemonicParsing="false" onAction="#refresh" prefHeight="50.0" prefWidth="100.0" text="Refresh">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Button>
+                              <TableView fx:id="table" layoutX="6.0" layoutY="14.0" maxHeight="-Infinity" prefHeight="292.0" prefWidth="411.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="14.0" />
+                              <Button layoutX="33.0" layoutY="317.0" mnemonicParsing="false" onAction="#AddList" prefHeight="50.0" prefWidth="100.0" text="Add to list" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Unkill processes">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button layoutX="120.0" layoutY="317.0" mnemonicParsing="false" onAction="#undoButton" prefHeight="50.0" prefWidth="100.0" text="Undo" />
+                              <ListView fx:id="unkillProcess" layoutX="9.0" layoutY="8.0" prefHeight="297.0" prefWidth="403.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="7.0" />
+                              <Button layoutX="10.0" layoutY="317.0" mnemonicParsing="false" onAction="#deleteUnkill" prefHeight="50.0" prefWidth="100.0" text="Delete selected" />
+                              <TextField fx:id="naam" layoutX="258.0" layoutY="315.0" prefHeight="31.0" prefWidth="153.0" />
+                              <Button layoutX="258.0" layoutY="354.0" mnemonicParsing="false" onAction="#inDatabase" prefWidth="153.0" text="Save to database" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

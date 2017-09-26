@@ -1,0 +1,7 @@
+De applicatie bevat meerdere tabellen en de tabellen
+bevat maar een applicatie.
+
+Naam van de tabellen wordt in applicatie gecreeërd.
+
+In de applicatie vind je windowsprocessen die in de
+database kunnen worden opgeslagen in een nieuwe tabel.
